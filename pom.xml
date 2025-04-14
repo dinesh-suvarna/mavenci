@@ -12,6 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+
+     <!-- Java version for compiling -->
     <maven.compiler.source>17</maven.compiler.source>  
     <maven.compiler.target>17</maven.compiler.target>  
   </properties>
@@ -25,9 +27,10 @@
     </dependency>
   </dependencies>
 
+  <!-- Build section: defines how the project should be built -->
   <build>
     <plugins>
-      <!-- Plugin to make the JAR executable -->
+      <!-- Plugin for creating executable JAR files -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
