@@ -21,7 +21,7 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package' 
 
-    - task: PublishPipelineArtifact@1
+ - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.SourcesDirectory)/target/mavenci-0.0.1-SNAPSHOT.jar'
     artifact: 'drop'
