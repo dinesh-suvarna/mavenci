@@ -16,7 +16,6 @@ steps:
     distribution: 'Temurin'
     architecture: 'x64'
 
-steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
