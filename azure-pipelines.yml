@@ -10,17 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: UseJava@1
-  inputs:
-    versionSpec: '17'
-    distribution: 'Temurin'
-    architecture: 'x64'
-
-- task: Maven@4
+- task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'UseJavaVersion'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'package' 
