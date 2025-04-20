@@ -20,8 +20,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'Path'
-    jdkDirectory: '$(JAVA_HOME)'  # Ensure it points to the Java 17 from UseJava@1
+    javaHomeOption: 'UseJavaVersion'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
